@@ -12,14 +12,14 @@ class AnimalTableViewCell: UITableViewCell {
     private var animalNameLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .preferredFont(forTextStyle: .largeTitle)
+        label.font = .preferredFont(forTextStyle: .title2)
         return label
     }()
     
     private var animalEmojiLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .preferredFont(forTextStyle: .title1)
+        label.font = .preferredFont(forTextStyle: .largeTitle)
         label.setContentHuggingPriority(.required, for: .horizontal)
         return label
     }()
@@ -30,6 +30,7 @@ class AnimalTableViewCell: UITableViewCell {
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.distribution = .fill
+        stackView.spacing = 10
         return stackView
     }()
     
@@ -47,10 +48,10 @@ class AnimalTableViewCell: UITableViewCell {
     
     private func setStackViewLayout() {
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            stackView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor)
         ])
     }
     

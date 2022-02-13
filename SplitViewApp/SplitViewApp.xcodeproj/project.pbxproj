@@ -13,6 +13,8 @@
 		63EE2AE827B8D90900EE60E5 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AE727B8D90900EE60E5 /* SplitViewController.swift */; };
 		63EE2AEA27B8DACA00EE60E5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AE927B8DACA00EE60E5 /* TableViewController.swift */; };
 		63EE2AED27B8E36700EE60E5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AEC27B8E36700EE60E5 /* UIColor+Extension.swift */; };
+		63EE2AEF27B8E51300EE60E5 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AEE27B8E51300EE60E5 /* Animal.swift */; };
+		63EE2AF127B8E6D400EE60E5 /* AnimalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AF027B8E6D400EE60E5 /* AnimalManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		63EE2AE727B8D90900EE60E5 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		63EE2AE927B8DACA00EE60E5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		63EE2AEC27B8E36700EE60E5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		63EE2AEE27B8E51300EE60E5 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		63EE2AF027B8E6D400EE60E5 /* AnimalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		63EE2AE627B8D0B600EE60E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63EE2AF027B8E6D400EE60E5 /* AnimalManager.swift */,
+				63EE2AEE27B8E51300EE60E5 /* Animal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +187,8 @@
 				63EE2AE827B8D90900EE60E5 /* SplitViewController.swift in Sources */,
 				63EE2AEA27B8DACA00EE60E5 /* TableViewController.swift in Sources */,
 				63EE2AED27B8E36700EE60E5 /* UIColor+Extension.swift in Sources */,
+				63EE2AF127B8E6D400EE60E5 /* AnimalManager.swift in Sources */,
+				63EE2AEF27B8E51300EE60E5 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

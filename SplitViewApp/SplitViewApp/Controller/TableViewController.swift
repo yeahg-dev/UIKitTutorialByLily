@@ -16,7 +16,7 @@ class TableViewController: UIViewController {
     
     override func loadView() {
         view = .init()
-        view.backgroundColor = UIColor(red: 230/255, green: 231/255, blue: 156/255, alpha: 1)
+        view.backgroundColor = UIColor(r: 230, g: 231, b: 156)
         view.addSubview(tableView)
         setTableViewLayout()
     }

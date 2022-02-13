@@ -12,6 +12,7 @@
 		63D06B3227B8008200F88145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D06B3127B8008200F88145 /* Assets.xcassets */; };
 		63EE2AE827B8D90900EE60E5 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AE727B8D90900EE60E5 /* SplitViewController.swift */; };
 		63EE2AEA27B8DACA00EE60E5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AE927B8DACA00EE60E5 /* TableViewController.swift */; };
+		63EE2AED27B8E36700EE60E5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AEC27B8E36700EE60E5 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		63D06B3627B8008200F88145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63EE2AE727B8D90900EE60E5 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		63EE2AE927B8DACA00EE60E5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		63EE2AEC27B8E36700EE60E5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		63D06B2727B8008000F88145 /* SplitViewApp */ = {
 			isa = PBXGroup;
 			children = (
+				63EE2AEB27B8E34C00EE60E5 /* Extension */,
 				63EE2AE627B8D0B600EE60E5 /* Model */,
 				63EE2AE327B8D08400EE60E5 /* View */,
 				63EE2AE427B8D08B00EE60E5 /* Controller */,
@@ -94,6 +97,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		63EE2AEB27B8E34C00EE60E5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				63EE2AEC27B8E36700EE60E5 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				63D06B2B27B8008000F88145 /* SceneDelegate.swift in Sources */,
 				63EE2AE827B8D90900EE60E5 /* SplitViewController.swift in Sources */,
 				63EE2AEA27B8DACA00EE60E5 /* TableViewController.swift in Sources */,
+				63EE2AED27B8E36700EE60E5 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

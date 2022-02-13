@@ -11,6 +11,7 @@ class TableViewController: UIViewController {
     let tableView: UITableView = {
         var tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
         tableView.register(cellWithClass: AnimalTableViewCell.self)
         return tableView
     }()

@@ -37,6 +37,7 @@ class AnimalTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // TODO: 호출 위치 적절한지 재확인 필요
+        self.backgroundColor = .clear
         contentView.addSubview(stackView)
         setStackViewLayout()
 //        print("👛style init 실행됨")

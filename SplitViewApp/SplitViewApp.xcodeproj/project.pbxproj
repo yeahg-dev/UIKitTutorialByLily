@@ -56,15 +56,47 @@
 		63D06B2727B8008000F88145 /* SplitViewApp */ = {
 			isa = PBXGroup;
 			children = (
-				63D06B2827B8008000F88145 /* AppDelegate.swift */,
-				63D06B2A27B8008000F88145 /* SceneDelegate.swift */,
-				63D06B2C27B8008000F88145 /* ViewController.swift */,
+				63EE2AE627B8D0B600EE60E5 /* Model */,
+				63EE2AE327B8D08400EE60E5 /* View */,
+				63EE2AE427B8D08B00EE60E5 /* Controller */,
+				63EE2AE527B8D0A600EE60E5 /* AppDelegate */,
 				63D06B2E27B8008000F88145 /* Main.storyboard */,
 				63D06B3127B8008200F88145 /* Assets.xcassets */,
 				63D06B3327B8008200F88145 /* LaunchScreen.storyboard */,
 				63D06B3627B8008200F88145 /* Info.plist */,
 			);
 			path = SplitViewApp;
+			sourceTree = "<group>";
+		};
+		63EE2AE327B8D08400EE60E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63EE2AE427B8D08B00EE60E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63D06B2C27B8008000F88145 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63EE2AE527B8D0A600EE60E5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				63D06B2827B8008000F88145 /* AppDelegate.swift */,
+				63D06B2A27B8008000F88145 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		63EE2AE627B8D0B600EE60E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

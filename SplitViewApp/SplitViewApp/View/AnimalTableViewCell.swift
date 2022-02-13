@@ -56,6 +56,11 @@ class AnimalTableViewCell: UITableViewCell {
         ])
     }
     
+    func setLabel(name: String?, emoji: String?) {
+        animalNameLabel.text = name
+        animalEmojiLabel.text = emoji
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

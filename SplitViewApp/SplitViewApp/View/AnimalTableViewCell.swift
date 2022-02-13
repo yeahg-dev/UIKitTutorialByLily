@@ -13,6 +13,7 @@ class AnimalTableViewCell: UITableViewCell {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .title2)
+        label.highlightedTextColor = UIColor(r: 230, g: 250, b: 156)
         return label
     }()
     
@@ -38,6 +39,8 @@ class AnimalTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // TODO: 호출 위치 적절한지 재확인 필요
         self.backgroundColor = .clear
+        selectionStyle = .default
+        isHighlighted = true
         contentView.addSubview(stackView)
         setStackViewLayout()
     }
@@ -48,10 +51,10 @@ class AnimalTableViewCell: UITableViewCell {
     
     private func setStackViewLayout() {
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor)
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
         ])
     }
     

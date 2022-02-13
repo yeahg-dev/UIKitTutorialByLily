@@ -29,6 +29,7 @@ extension SplitViewController: UITableViewDataSource {
         )
         let animal = animals[indexPath.row]
         cell.setLabel(name: animal.name, emoji: animal.emoji)
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }

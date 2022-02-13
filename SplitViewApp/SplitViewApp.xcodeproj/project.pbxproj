@@ -16,6 +16,7 @@
 		63EE2AEF27B8E51300EE60E5 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AEE27B8E51300EE60E5 /* Animal.swift */; };
 		63EE2AF127B8E6D400EE60E5 /* AnimalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AF027B8E6D400EE60E5 /* AnimalManager.swift */; };
 		63EE2AF327B8E89600EE60E5 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AF227B8E89600EE60E5 /* AnimalTableViewCell.swift */; };
+		63EE2AF527B8F04700EE60E5 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2AF427B8F04700EE60E5 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		63EE2AEE27B8E51300EE60E5 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		63EE2AF027B8E6D400EE60E5 /* AnimalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalManager.swift; sourceTree = "<group>"; };
 		63EE2AF227B8E89600EE60E5 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
+		63EE2AF427B8F04700EE60E5 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				63EE2AEC27B8E36700EE60E5 /* UIColor+Extension.swift */,
+				63EE2AF427B8F04700EE60E5 /* UITableView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				63D06B2927B8008000F88145 /* AppDelegate.swift in Sources */,
 				63EE2AF327B8E89600EE60E5 /* AnimalTableViewCell.swift in Sources */,
+				63EE2AF527B8F04700EE60E5 /* UITableView+Extension.swift in Sources */,
 				63D06B2B27B8008000F88145 /* SceneDelegate.swift in Sources */,
 				63EE2AE827B8D90900EE60E5 /* SplitViewController.swift in Sources */,
 				63EE2AEA27B8DACA00EE60E5 /* TableViewController.swift in Sources */,

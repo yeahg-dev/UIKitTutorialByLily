@@ -8,6 +8,10 @@
 import UIKit
 
 class SplitViewController: UISplitViewController {
+    let tableViewController: UIViewController = TableViewController()
     
+    override func viewDidLoad() {
+        setViewController(tableViewController, for: .primary)
+    }
 
 }

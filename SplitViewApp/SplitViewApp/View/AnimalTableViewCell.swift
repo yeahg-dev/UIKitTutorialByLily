@@ -13,7 +13,6 @@ class AnimalTableViewCell: UITableViewCell {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .largeTitle)
-//        print("👒label 만들어짐")
         return label
     }()
     
@@ -40,11 +39,9 @@ class AnimalTableViewCell: UITableViewCell {
         self.backgroundColor = .clear
         contentView.addSubview(stackView)
         setStackViewLayout()
-//        print("👛style init 실행됨")
     }
     
     required init?(coder: NSCoder) {
-//        print("🪖init coder실행됨")
         fatalError("init(coder:) has not been implemented")
     }
     

@@ -9,11 +9,13 @@ import UIKit
 
 class SplitViewController: UISplitViewController {
     let tableViewController: TableViewController = TableViewController()
+    let textViewController: TextViewController = TextViewController()
     var animals: [Animal] = AnimalManager().animals
     
     override func viewDidLoad() {
         tableViewController.tableView.dataSource = self
         setViewController(tableViewController, for: .primary)
+        setViewController(textViewController, for: .secondary)
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6385CFBA27BC0D48002EB151 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6385CFB927BC0D48002EB151 /* TextViewController.swift */; };
 		63D06B2927B8008000F88145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D06B2827B8008000F88145 /* AppDelegate.swift */; };
 		63D06B2B27B8008000F88145 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D06B2A27B8008000F88145 /* SceneDelegate.swift */; };
 		63D06B3227B8008200F88145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D06B3127B8008200F88145 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6385CFB927BC0D48002EB151 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		63D06B2527B8008000F88145 /* SplitViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D06B2827B8008000F88145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63D06B2A27B8008000F88145 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				63EE2AE727B8D90900EE60E5 /* SplitViewController.swift */,
 				63EE2AE927B8DACA00EE60E5 /* TableViewController.swift */,
+				6385CFB927BC0D48002EB151 /* TextViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				63EE2AF527B8F04700EE60E5 /* UITableView+Extension.swift in Sources */,
 				63D06B2B27B8008000F88145 /* SceneDelegate.swift in Sources */,
 				63EE2AE827B8D90900EE60E5 /* SplitViewController.swift in Sources */,
+				6385CFBA27BC0D48002EB151 /* TextViewController.swift in Sources */,
 				63EE2AEA27B8DACA00EE60E5 /* TableViewController.swift in Sources */,
 				63EE2AED27B8E36700EE60E5 /* UIColor+Extension.swift in Sources */,
 				63EE2AF127B8E6D400EE60E5 /* AnimalManager.swift in Sources */,

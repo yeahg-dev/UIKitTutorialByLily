@@ -33,8 +33,8 @@ class TextViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: circleImage,
             style: .plain,
-            target: nil,
-            action: nil
+            target: self,
+            action: #selector(tappedCircleButton(sender:))
         )
     }
     
@@ -45,6 +45,23 @@ class TextViewController: UIViewController {
             textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    @objc
+    private func tappedCircleButton(sender: AnyObject) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let shareAction = UIAlertAction(title: "Share", style: .default, handler: nil)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
+        
+        alertController.addAction(shareAction)
+        alertController.addAction(deleteAction)
+        
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.barButtonItem = sender as? UIBarButtonItem
+          }
+        
+        present(alertController, animated: true, completion: nil)
     }
 
 }

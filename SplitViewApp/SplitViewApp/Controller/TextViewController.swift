@@ -51,7 +51,9 @@ class TextViewController: UIViewController {
     private func tappedCircleButton(sender: AnyObject) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let shareAction = UIAlertAction(title: "Share", style: .default, handler: nil)
+        let shareAction = UIAlertAction(title: "Share", style: .default) { (action: UIAlertAction) in
+            self.presentActivityView(action: action)
+        }
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
         
         alertController.addAction(shareAction)
@@ -62,6 +64,26 @@ class TextViewController: UIViewController {
           }
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc
+    private func presentActivityView(action: UIAlertAction) {
+        let text = textView.text
+        let activityController = UIActivityViewController(
+            activityItems: [text],
+            applicationActivities: nil
+        )
+        
+        if let popoverController = activityController.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(
+                x: self.view.bounds.midX,
+                y: self.view.bounds.midY,
+                width: 0,
+                height: 0
+            )
+        }
+        present(activityController, animated: true, completion: nil)
     }
 
 }

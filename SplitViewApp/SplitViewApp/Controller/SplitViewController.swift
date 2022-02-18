@@ -10,7 +10,7 @@ import UIKit
 class SplitViewController: UISplitViewController {
     let tableViewController: TableViewController = TableViewController()
     let textViewController: TextViewController = TextViewController()
-    var animals: [Animal] = AnimalManager().animals
+    var animalManager: AnimalManager = AnimalManager()
     
     override func viewDidLoad() {
         tableViewController.tableView.dataSource = self
@@ -21,7 +21,7 @@ class SplitViewController: UISplitViewController {
 
 extension SplitViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        return animalManager.animals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -29,7 +29,7 @@ extension SplitViewController: UITableViewDataSource {
             withClass: AnimalTableViewCell.self,
             for: indexPath
         )
-        let animal = animals[indexPath.row]
+        let animal = animalManager.animals[indexPath.row]
         cell.setLabel(name: animal.name, emoji: animal.emoji)
         cell.accessoryType = .disclosureIndicator
         return cell

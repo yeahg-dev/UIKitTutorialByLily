@@ -19,4 +19,8 @@ struct AnimalManager {
                    Animal(name: "곰돌이", emoji: "🐻")
         ]
     }
+    
+    mutating func delete(at index: Int) {
+        animals.remove(at: index)
+    }
 }

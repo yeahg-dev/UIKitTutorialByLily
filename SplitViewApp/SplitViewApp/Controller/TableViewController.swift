@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol TableViewControllerDataSource: AnyObject {
+    func tableViewController(_ viewController: TableViewController, rowForDelete inedexPath: IndexPath)
+}
+
 class TableViewController: UIViewController {
+    weak var dataSource: TableViewControllerDataSource?
+    
     let tableView: UITableView = {
         var tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,8 +31,7 @@ class TableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
     }
     
     func setTableViewLayout() {
@@ -38,4 +43,16 @@ class TableViewController: UIViewController {
         ])
     }
 
+}
+
+extension TableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { [weak self] _, _, _ in
+            self!.dataSource?.tableViewController(self!, rowForDelete: indexPath) // Model먼저 삭제
+            tableView.deleteRows(at: [indexPath], with: .top)
+        }
+        deleteAction.image = UIImage(systemName: "trash.fill")
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }

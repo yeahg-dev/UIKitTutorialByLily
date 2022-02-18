@@ -14,6 +14,7 @@ class SplitViewController: UISplitViewController {
     
     override func viewDidLoad() {
         tableViewController.tableView.dataSource = self
+        tableViewController.dataSource = self
         setViewController(tableViewController, for: .primary)
         setViewController(textViewController, for: .secondary)
     }
@@ -33,5 +34,11 @@ extension SplitViewController: UITableViewDataSource {
         cell.setLabel(name: animal.name, emoji: animal.emoji)
         cell.accessoryType = .disclosureIndicator
         return cell
+    }
+}
+
+extension SplitViewController: TableViewControllerDataSource {
+    func tableViewController(_ viewController: TableViewController, rowForDelete indexPath: IndexPath) {
+        animalManager.delete(at: indexPath.row)
     }
 }

@@ -8,6 +8,8 @@
 import UIKit
 
 protocol TableViewControllerDataSource: AnyObject {
+    func tableViewController(_ viewController: TableViewController, numbersOfSection: Int) -> Int
+    func tableViewController(_ viewController: TableViewController, rowForAnimal indexPath: IndexPath) -> Animal
     func tableViewController(_ viewController: TableViewController, rowForDelete inedexPath: IndexPath)
 }
 
@@ -32,6 +34,7 @@ class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func setTableViewLayout() {
@@ -43,6 +46,27 @@ class TableViewController: UIViewController {
         ])
     }
 
+}
+
+extension TableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int
+    ) -> Int {
+        return dataSource?.tableViewController(self, numbersOfSection: .zero) ?? .zero
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withClass: AnimalTableViewCell.self,
+            for: indexPath
+        )
+        let animal = dataSource?.tableViewController(self, rowForAnimal: indexPath)
+        cell.setLabel(name: animal?.name, emoji: animal?.emoji)
+        cell.accessoryType = .disclosureIndicator
+        return cell
+    }
 }
 
 extension TableViewController: UITableViewDelegate {

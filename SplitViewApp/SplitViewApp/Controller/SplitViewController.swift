@@ -11,9 +11,12 @@ class SplitViewController: UISplitViewController {
     let tableViewController: TableViewController = TableViewController()
     let textViewController: TextViewController = TextViewController()
     var animalManager: AnimalManager = AnimalManager()
+    var selectedIndexPath: IndexPath = IndexPath(row: .zero, section: .zero)
     
     override func viewDidLoad() {
         tableViewController.dataSource = self
+        tableViewController.delegate = self
+        textViewController.delegate = self
         setViewController(tableViewController, for: .primary)
         setViewController(textViewController, for: .secondary)
     }
@@ -33,8 +36,26 @@ extension SplitViewController: TableViewControllerDataSource {
     }
     
     func tableViewController(_ viewController: TableViewController,
-                             rowForDelete indexPath: IndexPath
+                             rowForDelete inedexPath: IndexPath
     ) {
-        animalManager.delete(at: indexPath.row)
+        animalManager.delete(at: inedexPath.row)
+    }
+}
+
+extension SplitViewController: TableViewControllerDelegate {
+    func tableViewController(_ viewController: TableViewController,
+                             didSelectRow indexPath: IndexPath
+    ) {
+        let description = animalManager.animals[indexPath.row].description
+        textViewController.updateTextViewContent(with: description)
+        selectedIndexPath = indexPath
+    }
+}
+
+extension SplitViewController: TextViewControllerDelegate {
+    func textViewController(_ viewController: TextViewController,
+                            didChangeTextView string: String?
+    ) {
+        animalManager.update(at: selectedIndexPath.row, with: string)
     }
 }

@@ -7,11 +7,18 @@
 
 import UIKit
 
+protocol TextViewControllerDelegate: AnyObject {
+    func textViewController(_ viewController: TextViewController, didChangeTextView string: String?)
+}
+
 class TextViewController: UIViewController {
+    weak var delegate: TextViewControllerDelegate?
+    
     private var textView: UITextView = {
         let textView = UITextView(frame: .zero)
         // TODO: UITraitCollection에 따라 font 설정하는 코드 추가
         textView.font = .preferredFont(forTextStyle: .body)
+        textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()
     
@@ -25,7 +32,7 @@ class TextViewController: UIViewController {
         super.viewDidLoad()
         setUpTextViewLayout()
         setUpNavigationItems()
-        // Do any additional setup after loading the view.
+        textView.delegate = self
     }
     
     private func setUpNavigationItems() {
@@ -45,6 +52,10 @@ class TextViewController: UIViewController {
             textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    func updateTextViewContent(with string: String?) {
+        textView.text = string
     }
     
     @objc
@@ -86,4 +97,11 @@ class TextViewController: UIViewController {
         present(activityController, animated: true, completion: nil)
     }
 
+}
+
+extension TextViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        let description = textView.text
+        delegate?.textViewController(self, didChangeTextView: description)
+    }
 }

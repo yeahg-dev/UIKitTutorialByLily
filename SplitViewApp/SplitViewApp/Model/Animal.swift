@@ -11,5 +11,10 @@ struct Animal {
     
     let name: String?
     let emoji: String?
+    var description: String?
+    
+    mutating func updateDescription(with string: String?) {
+        description = string
+    }
 }
 

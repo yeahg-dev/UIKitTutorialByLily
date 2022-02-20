@@ -23,4 +23,8 @@ struct AnimalManager {
     mutating func delete(at index: Int) {
         animals.remove(at: index)
     }
+    
+    mutating func update(at index: Int, with string: String?) {
+        animals[index].updateDescription(with: string)
+    }
 }

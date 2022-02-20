@@ -13,8 +13,13 @@ protocol TableViewControllerDataSource: AnyObject {
     func tableViewController(_ viewController: TableViewController, rowForDelete inedexPath: IndexPath)
 }
 
+protocol TableViewControllerDelegate: AnyObject {
+    func tableViewController(_ viewController: TableViewController, didSelectRow indexPath: IndexPath)
+}
+
 class TableViewController: UIViewController {
     weak var dataSource: TableViewControllerDataSource?
+    weak var delegate: TableViewControllerDelegate?
     
     let tableView: UITableView = {
         var tableView = UITableView(frame: .zero)
@@ -78,5 +83,9 @@ extension TableViewController: UITableViewDelegate {
         deleteAction.image = UIImage(systemName: "trash.fill")
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.tableViewController(self, didSelectRow: indexPath)
     }
 }

@@ -19,6 +19,8 @@ class SplitViewController: UISplitViewController {
         textViewController.delegate = self
         setViewController(tableViewController, for: .primary)
         setViewController(textViewController, for: .secondary)
+        preferredDisplayMode = .twoBesideSecondary
+        preferredSplitBehavior = .tile
     }
 }
 
